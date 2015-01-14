@@ -1,4 +1,4 @@
-%% Palindrome Product
+%% Palindrome Product   **NEEDS VECTORIZATION**
 clear; close all; clc;
 
 
@@ -35,4 +35,4 @@ end
 
 toc
 
-fprintf('The largest palindrome is %.0d\n',palindromenew)
+palindromenew
