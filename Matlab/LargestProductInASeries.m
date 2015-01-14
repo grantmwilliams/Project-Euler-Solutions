@@ -1,4 +1,4 @@
-%% Largest Product in a Series
+%% Largest Product in a Series  **DOES NOT WORK** 
 clear; close all; clc;
 
 tic
@@ -7,14 +7,14 @@ string = '7316717653133062491922511967442657474235534919493496983520312774506326
 
 best = 0;
 current = 0;
-currentMat = zeros(13);
+currentMat = zeros(1:13);
 stop = length(string)-13;
 
-for i=2:stop+1
+for i=2:stop+1 % Picks location within string
 
-    for j = 1:13
+    for j = 1:13 % Selects the 13 next numbers in the string
        
-        currentMat(j) = str2double(i + j - 1);
+        currentMat(j) = str2double(i + j-1);
         current = prod(currentMat);
     end
 
