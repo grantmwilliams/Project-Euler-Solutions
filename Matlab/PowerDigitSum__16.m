@@ -1,4 +1,5 @@
 %% Power Digit Sum
+clear;close all; clc;
 tic
 
 x = char(sym(2^1000));
