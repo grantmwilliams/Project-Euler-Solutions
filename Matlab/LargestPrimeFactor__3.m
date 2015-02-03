@@ -1,3 +1,7 @@
-prime =  600851475143;
+%Largest Prime Factor 3
+clear;close all;clc;
+tic
 
-Euler3(prime);
+final = max(factor(600851475143))
+
+toc

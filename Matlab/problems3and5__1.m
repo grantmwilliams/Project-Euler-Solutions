@@ -2,6 +2,7 @@
 clear
 
 %% Slow For Loop
+clear;
 tic
 for i = 1:999
     
@@ -14,6 +15,7 @@ end
 
 answer = sum(A)
 toc
+
 
 
 %% Vectorized Code

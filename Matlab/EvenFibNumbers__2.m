@@ -1,6 +1,6 @@
-% Even Fibonacci Numbers
+%% Even Fibonacci Numbers
 
-%% Using Dynamic Programming
+% Using Dynamic Programming
 clear;close all;clc;
 tic
 fibonacci=[1 2]; % First 2 num in sequence
