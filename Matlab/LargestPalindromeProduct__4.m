@@ -35,4 +35,5 @@ end
 
 toc
 
-palindromenew
+disp(palindromenew);
+

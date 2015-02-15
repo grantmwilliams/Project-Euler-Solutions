@@ -20,4 +20,3 @@ end
 fprintf('The answer is: %.0d\n',answer);
 toc
 
-%% Matrix Operations
