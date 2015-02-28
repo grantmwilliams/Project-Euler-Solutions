@@ -11,12 +11,12 @@ final = sumSq - sqSum
 toc;
 
 %% Another Vectorized Attempt
-clear; close all; 
-x = 1:100;
+clear;close all;clc;
 
 tic
-final = abs(sum(x.^2)-sum(x)^2)
+disp(abs(sum((1:100).^2)-sum((1:100))^2));
 toc
+
 
 %% Using Loops
 clear; close all;
