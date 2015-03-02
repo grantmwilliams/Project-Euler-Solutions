@@ -30,3 +30,13 @@ end
 fprintf('The smallest evenly divisible number is %.0d\n',answer)
 
 toc
+
+%% Faster Version
+clear;close all;clc;
+tic
+final = 1;
+for i = 1:20
+    final = lcm(final,i);
+end
+disp(final);
+toc

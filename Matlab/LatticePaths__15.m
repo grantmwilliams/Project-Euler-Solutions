@@ -10,7 +10,7 @@
 %% Mathematical Solution (Basically a Calculator):
 clear; close all; clc;
 tic
-final = int64(factorial(20 * 2) / (factorial(20) * factorial(2*20 - 20)))
+disp(int64(factorial(20 * 2) / (factorial(20) * factorial(2*20 - 20))));
 toc
 %% Expanded Combitronics Answer:
 clear; close all; clc;
@@ -36,7 +36,7 @@ while i < gridSize
     i = i+1;
 end
 
-final = int64(paths)
+disp(int64(paths));
 
 toc
 
@@ -51,7 +51,7 @@ for i = 1:n
     x = x * ((n+i)/i);
 end
 
-x
+disp(x);
 toc
 %% Using A Generated Pascal Triangle To Find A Solution:
 clear; close all; clc;
@@ -77,5 +77,5 @@ end
 temp = max(d,[],2);
 final = max(temp);
 
-final
+disp(final);
 toc

@@ -3,7 +3,9 @@
 % Using Dynamic Programming
 clear;close all;clc;
 tic
-fibonacci=[1 2]; % First 2 num in sequence
+fibonacci = zeros(1,50);
+fibonacci(1) = 1;
+fibonacci(2) = 2;
 
 i = 2;
 answer = 2;

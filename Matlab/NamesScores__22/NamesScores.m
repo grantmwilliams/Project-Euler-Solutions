@@ -13,4 +13,6 @@ for i = 1:length(names)
  
    final = final + sum(n) * i;
 end
+
+disp(final);
 toc

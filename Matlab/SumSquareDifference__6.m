@@ -7,7 +7,7 @@ sqSum = sum(x.^2);
 
 sumSq = sum(x)^2;
 
-final = sumSq - sqSum
+disp(sumSq - sqSum);
 toc;
 
 %% Another Vectorized Attempt
@@ -19,7 +19,7 @@ toc
 
 
 %% Using Loops
-clear; close all;
+clear; close all;clc;
 tic
 
 x = 100;
@@ -31,5 +31,5 @@ for i = 1:x
     sqSum = sqSum + i;
 end
 newSqSum = sqSum^2;
-final = abs(sumSq-newSqSum)
+disp(abs(sumSq-newSqSum));
 toc

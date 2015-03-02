@@ -21,6 +21,7 @@ for n = 3:limit
     end
 end
 
-final = n-3
+final = n-3;
+disp(final)
 toc
 

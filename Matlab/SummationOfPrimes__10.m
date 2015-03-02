@@ -3,8 +3,6 @@ clear;close all;clc;
 
 tic
 
-final = sum(primes(2e6));
-
-fprintf('%d \n',final);
+disp(sum(primes(2e6)));
 
 toc
