@@ -1,4 +1,6 @@
+
 #include <iostream>
+#include <math.h>
 #include <ctime>
 using namespace std;
 
@@ -11,28 +13,26 @@ int main()
     start = std::clock();
     
     //Actual Algorithm Here
-    int a = 0;
-    int b = 1;
-    int c = 0;
-    int sum = 0;
+    long long int num = 600851475143;
+    int LPF = 1;
+    int i;
     
-    
-    while (sum <= 4000000) {
-        c = a + b;
-        a = b;
-        b = c;
-        if((b % 2)==0){
-            sum += b;
+    for (i = 2; i <= sqrt(600851475143) && num != 1; i++)
+    {
+        while (num % i == 0)
+        {
+            num = num / i;
+            LPF = i;
         }
     }
     
     //Finish Clock Stuff
     duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
     
-    std::cout<<"Elasped: "<< duration <<" seconds"<<'\n';
+    std::cout<<"Elapsed: "<< duration << " seconds"<<'\n';
     
     //Print Answer to Algorithm
-     printf("The sum is %d\n", sum);
+    cout << LPF << endl;
     
     return 0;
 }
