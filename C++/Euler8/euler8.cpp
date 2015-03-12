@@ -29,7 +29,7 @@ int main()
                 i += 12; // increments so i begins without the 0 in the 13 digits
                 break;
             }
-            current *= charToInt(bigAssNumber[j]);
+            current *= charToInt(bigAssNumber[j]); // Multiplying the 13 digits
             if (current > final) {
                 final = current;
             }
@@ -42,5 +42,6 @@ int main()
     
     printf("Maximum product of any 13 digits is: %ld \n",final);
     printf("Elapsed time is: %f seconds \n",elapsed);
+    return 0;
     
 }
