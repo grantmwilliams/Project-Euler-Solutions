@@ -25,7 +25,7 @@ contains
             end do
         end do
 
-    print *, ways(201)
+    print *, "£2 can be made in:",ways(201)," ways"
 
     end subroutine ans
 end program euler31
