@@ -9,3 +9,17 @@ while length(P) < 10001 || length(P) == 10001
 end
 disp(P(10001));
 toc
+
+%% 10001 Prime Number Other Technique
+
+limit = 10001;
+count = 1;
+num = 3;
+while (count < limit || count == limit)
+    if (isprime(num) == 1)
+        count = count+1;
+    end
+    num = num+2;
+end
+
+disp
