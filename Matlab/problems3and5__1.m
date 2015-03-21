@@ -43,14 +43,8 @@ i15=floor(i/15);
 disp((3*i3*(i3+1) + 5*i5*(i5+1) - 15*i15*(i15+1))/2);
 toc
 
-%% New Vectorized Code
+%% New Vectorized One-Liner (Possibly Fastest?)
 clear
-
 tic
-
-A = 3:3:999;
-B = 5:5:995;
-C = 15:15:990;
-disp(sum(A)+sum(B)-sum(C));
-
+disp(sum(3:3:999)+sum(5:5:995)-sum(15:15:990));
 toc
