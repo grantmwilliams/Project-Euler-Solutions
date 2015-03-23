@@ -10,6 +10,13 @@ call cpu_time(finish)
 print '("Elapsed: ", F15.6, " seconds")', finish - start
 
 
+call cpu_time(start)
+call sieve5()
+call cpu_time(finish)
+
+print '("Elapsed: ", F15.6, " seconds")', finish - start
+
+
 contains
 
 !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!
@@ -259,7 +266,7 @@ end subroutine
 subroutine sieve4()
 implicit none
         logical*1, dimension(:), allocatable:: primes, stager
-        integer*8 :: i, j, X
+        integer*8 :: i, j, X, sigma=0
 
         write(*,*) "Primes under what?"
         read (*,*) X
@@ -284,24 +291,64 @@ implicit none
                 primes(i)=.false.
         end do
 
-
+        sigma = 28
         !We've eliminated nonprime indexes, if we do this consecutively we
         !eliminate all nonprimes and never need to isprime(n) them
-        do i=13, int(sqrt(real(size(primes))))+5
+        do i=13, int(sqrt(real(size(primes))))+1
                 if (primes(i)) then
-                        do j=2*i, size(primes), i
+                        sigma = sigma + i
+                        do j=(2*i), size(primes), i
+                                primes(j)=.false.
+                        end do
+                end if 
+        end do
+        
+        do i=int(sqrt(real(size(primes))))+2, size(primes)
+                if (primes(i)) then
+                      sigma = sigma + i
+              end if
+        end do 
+
+        write(*,*) sigma
+
+!!This one is fast        
+end subroutine
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!
+subroutine sieve5()
+implicit none
+        logical*1, dimension(:), allocatable:: primes, stager
+        integer*8 :: i, j, X, sigma=0
+
+        write(*,*) "Primes under what?"
+        read (*,*) X
+        allocate(primes(X))
+        primes = .true.
+        primes(1)=.false.
+
+
+
+
+        do i=2, int(sqrt(real(size(primes))))+1
+                if (primes(i)) then
+                        sigma= sigma + i
+                        do j=(i*i), size(primes), i
                                 primes(j)=.false.
                         end do
                 end if 
         end do
         
 
+        do i=int(sqrt(real(size(primes))))+2, size(primes)
+                if (primes(i)) then
+                      sigma = sigma + i
+              end if
+        end do
+        
+   
+        write(*,*) sigma
 
-        write(*,*) primes(size(primes))
 
-!!This one is fast        
 end subroutine
-
         
 
 
