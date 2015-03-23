@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    const long upper = 2000000;
+    const long long upper = 2000000;
     long i = 0;
     int k = 0;
     const int lim = (sqrt(upper)+1);
