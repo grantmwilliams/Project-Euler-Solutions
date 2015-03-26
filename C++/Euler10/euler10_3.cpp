@@ -16,8 +16,7 @@ int main() {
     std::clock_t start;
     double duration;
     start = std::clock();
-    //stop clock stuff
-    
+    //stop clock stuff 
     
     // begin by setting array to show all possible primes as true
     while (++i<upper+1){

@@ -16,3 +16,13 @@ end
 
 disp(final);
 toc
+
+%% Vectorized Version?
+clear;close all;clc;
+tic
+load('namesData.mat');
+
+names = sort(strrep(names(1,1:end),'"','')); 
+
+disp(sum(sum(abs(int32(char(names(1,1:length(names))))-64),2)'.*(1:length(names))));
+toc
