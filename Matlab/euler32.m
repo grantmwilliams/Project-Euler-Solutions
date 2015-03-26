@@ -1,4 +1,4 @@
-%% Pandigital Products
+%% Pandigital Products 32
 clear;close all;clc;
 tic
 
