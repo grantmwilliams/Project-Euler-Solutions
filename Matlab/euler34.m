@@ -5,7 +5,6 @@ tic
 facHash = factorial(0:1:9);
 limit = 2540160;
 final = 0;
-i = 145;
 for i = 3:limit
     x = i;
     temp  = 0;
