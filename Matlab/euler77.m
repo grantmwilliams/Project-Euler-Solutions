@@ -8,7 +8,7 @@ n = zeros(1,limit);
 k = zeros(1,limit);
 k(1) = 1;
 k(2) = 2;
-
+x = zeros(1,limit-5);
 for n = 3:limit
   
     for j = 1:n-1
