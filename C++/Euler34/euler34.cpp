@@ -1,18 +1,23 @@
 #include <iostream>
-#include <stdlib.h>
 #include <vector>
-#include <omp.h>
 
 using namespace std;
 
-long checkFactorion(long num, vector<int> facHash){
+long checkFactorion(long num, vector<long> facHash){
   long sum = 0;
-  int temp;
+  long temp;
+
+  /* Test facHash vector is okay*/
+  for (int i = 0; i <= 9; i++){
+    cout << "fachHash[" << i << "]: " << fachHash[i] << endl;
+  }
+
   for (long x = num; x > 0; x /= 10){
     temp = x % 10;
     sum += facHash[temp];
   }
-
+  
+  cout << "Sum: " << sum << endl;
   if (sum == num){
     return true;
   }
@@ -24,9 +29,9 @@ long checkFactorion(long num, vector<int> facHash){
 int main(){
 
   /*Create a Factorial Lookup Table*/
-  std::vector<int> facHash(10);
+  std::vector<long> facHash(10);
   facHash[0] = 1;
-  for(int i = 1; i<10; i++){
+  for(int i = 1; i <= 9; i++){
     facHash[i] = facHash[i-1] * i;
   }
 
